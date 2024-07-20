@@ -12,6 +12,11 @@
     <!-- favicon -->
     <link rel="apple-touch-icon" href="apple-touch-icon.html" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/fav.png') }}" />
+
+
+
+
+
     <!-- Bootstrap  v5.1.3 css -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <!-- Sall css -->
@@ -30,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/custom.css') }}" />
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}" />
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsiveness.css') }}" />
 
 </head>
 
@@ -82,77 +89,56 @@
         <!-- Canvas Mobile Menu start -->
         <nav class="right_menu_togle mobile-navbar-menu" id="mobile-navbar-menu">
             <ul class="nav-menu sc-mb-45 sc-pl-0">
-                <li class="list-gap menu-item-has-children current-menu-item">
-                    <a class="active" href="index.html"> Home</a>
-                    <ul class="list-gap sub-menu-list">
-                        <li><a class="active" href="index.html">Home One</a></li>
-                        <li><a href="index2.html">Home Two</a></li>
-                        <li><a href="index3.html">Home Three</a></li>
-                    </ul>
-                </li>
                 <li class="list-gap">
-                    <a href="about.html"> About Us</a>
+                    <a class="" href="/"> Home</a>
                 </li>
-                <li class="list-gap menu-item-has-children">
-                    <a href="#"> Projects</a>
-                    <ul class="list-gap sub-menu-list">
-                        <li><a href="project.html">Project</a></li>
-                        <li><a href="project-details.html">Project Details</a></li>
-                    </ul>
-                </li>
-                <li class="list-gap menu-item-has-children">
-                    <a href="#"> Pages</a>
-                    <ul class="list-gap sub-menu-list">
-                        <li><a href="price.html">Price</a></li>
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="service-details.html">Service Details</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="team-details.html">Team Details</a></li>
-                        <li><a href="faq.html">Faq</a></li>
-                        <li><a href="error.html">404 Error</a></li>
-                    </ul>
-                </li>
-                <li class="list-gap menu-item-has-children">
-                    <a href="#"> Blog</a>
-                    <ul class="list-gap sub-menu-list">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li class="list-gap"><a href="contact.html">Contact</a></li>
+                <li class="list-gap"> <a href="/about_us"> About Us</a> </li>
+
+                <li class="list-gap"> <a href="/services">Services</a> </li>
+
+                <li class="list-gap"> <a href="/blog">Blogs</a> </li>
+
+                <li class="list-gap"> <a href="/events">Events</a> </li>
+
+                <li class="list-gap"><a href="/contact_us">Contact Us</a></li>
+
+                @auth
+                @if(Auth::user()->role_as == 1)
+                <li class="list-gap"><a href="{{ route('admin_dashboard') }}">Dashboard</a></li>
+                @elseif(Auth::user()->role_as == 2)
+                <li class="list-gap"><a href="#">Dashboard</a></li>
+                @endif
+                @endauth
             </ul>
         </nav>
 
 
         <!-- Canvas Menu end -->
         <div class="sc-offcanvas-list-info">
-            <p class="des sc-mb-20">Boxfin auctor lectus better best conbia euismot rhoncus dolora gorgeous system.</p>
             <h4 class="product-title">Contact Info</h4>
             <ul class="list-gap">
                 <li>
                     <i class="icon-map"></i>
-                    4983 Walnut Avenue Mountain
+                    {{ $contact->location ?? '' }}
                 </li>
-                <li><i class="icon-phone"></i><a href="tel:02(585)6328585">02 (585) 632 8585</a></li>
-                <li><i class="icon-mail"></i><a href="mailto:bizcam@example.com">bizcam@example.com</a></li>
+                <li><i class="icon-phone"></i><a href="tel:{{ $contact->phone ?? '' }}">{{ $contact->phone ?? '' }}</a></li>
+                <li><i class="icon-mail"></i><a href="mailto:{{ $contact->email ?? '' }}">{{ $contact->email ?? '' }}</a></li>
             </ul>
         </div>
-        <div class="contact-map">
-            <iframe src="https://maps.google.com/maps?q=manhatan&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="border: 0" allowfullscreen=""></iframe>
-        </div>
+
         <div class="sc-offcanvas-icon-list">
             <ul>
                 <li>
-                    <a href="#"><i class="icon-linkedin-2"></i></a>
+                    <a href="{{ $contact->linkedln ?? '#' }}"><i class="icon-linkedin-2"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="icon-twiter"></i></a>
+                    <a href="{{ $contact->twitter ?? '#' }}"><i class="icon-twiter"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="icon-intragram"></i></a>
+                    <a href="{{ $contact->instagram ?? '#' }}"><i class="icon-intragram"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="icon-facebook-2"></i></a>
+                    <a href="{{ $contact->facebook ?? '#' }}"><i class="icon-facebook-2"></i></a>
                 </li>
             </ul>
         </div>

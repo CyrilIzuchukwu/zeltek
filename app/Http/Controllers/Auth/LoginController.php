@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,8 +26,25 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected $redirectTo = '/home';
 
+    public function authenticated()
+    {
+        // Check if the user is active
+        if (Auth::user()->active != 1) {
+            Auth::logout();
+            return redirect('/login')->with('error', 'Your account have been suspended');
+        }
+
+        if (Auth::user()->role_as == '1') {
+            return redirect('super_admin/dashboard')->with('message', 'Welcome to your Dashboard');
+        } elseif (Auth::user()->role_as == '0') {
+            // return redirect('/home')->with('success', 'Logged in successfully');
+            dd('welcome');
+        } elseif (Auth::user()->role_as == '2') {
+            return redirect('sub_admin/dashboard')->with('success', 'Welcome to your Dashbaord');
+        }
+    }
     /**
      * Create a new controller instance.
      *

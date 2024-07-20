@@ -75,7 +75,7 @@
             <div class="sc-statistics-style white-bg-color">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="sc-statistics-left-content about">
+                        <div class="sc-statistics-left-content ai about">
                             <div class="sc-heading-area sc-mb-40">
                                 <h2 class="title">Building Good Foundation Success Business</h2>
                             </div>
@@ -106,7 +106,7 @@
                             <div class="sc-about-auother-box d-flex align-items-end justify-content-end sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="250">
 
                                 <div class="sc-about-btn">
-                                    <a class="sc-primary-btn" href="about.html">Learn More</a>
+                                    <a class="sc-primary-btn" href="/about_us">Learn More</a>
                                 </div>
 
                             </div>
@@ -206,11 +206,11 @@
     <!--=========== core value Section ends =========-->
 
 
-    <div class="sc-global-section-area sc-pb-90">
+    <div class="sc-global-section-area aii sc-pb-90  ">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 sal-animate" data-sal="slide-right" data-sal-duration="800">
-                    <div class="sc-global-item sc-md-mb-55">
+                <div class="col-lg-6  order-2 order-md-1 sal-animate" data-sal="slide-right" data-sal-duration="800">
+                    <div class="sc-global-item ai sc-md-mb-55">
                         <div class="sc-heading-area sc-mb-30">
                             <span class="sub-title white-sub-title"><i class="icon-line me-2"></i>Services</span>
                         </div>
@@ -237,7 +237,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 sal-animate" data-sal="slide-left" data-sal-duration="800">
+                <div class="col-lg-6 order-1 order-md-2 sal-animate" data-sal="slide-left" data-sal-duration="800">
                     <div class="service-image-right">
                         <img src="assets/images/project/global-img.jpg" alt="">
                     </div>
@@ -247,156 +247,170 @@
     </div>
 
     <!--=========== Trainig Service Section Start =========-->
-    <div class="sc-service-section-area position-relative">
+    <div class="sc-team-section-area sc-long-map sc-pb-100 sc-md-pb-80">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="sc-service-content-area sc-pt-100 sc-md-pt-75 sc-pb-45 sc-md-pb-25">
-                        <div class="row align-items-center sc-pb-10">
-                            <div class="col-md-7">
-                                <div class="sc-heading-area sc-mb-30">
-                                    <span class="sub-title"><i class="icon-line"></i> Our Training Services</span>
-                                    <p class="des">
-                                        We offer a comprehensive suite of training programs designed to enhance the skills and
-                                        competencies of professionals across various domains.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="sc-service-btn text-end">
-                                    <a class="sc-transparent-btn" href="">Services</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row sc-pl-40">
-                            <div class="col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                                <div class="sc-services-item sc-mb-70  sc-sm-mt-30 sc-md-mr-0">
-                                    <div class="services-icon">
-                                        <i class="icon-bussness"></i>
-                                    </div>
-                                    <div class="sc-service-content">
-                                        <h4>
-                                            <p class="title">Business Planning</p>
-                                        </h4>
-                                    </div>
-                                    <div class="service-btn">
-                                        <a class="sc-service-btn" href="#"><i class="icon-sliuder-arrow2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                                <div class="sc-services-item services-icon-two sc-mb-70 sc-ml-25 sc-sm-ml-0">
-                                    <div class="services-icon">
-                                        <i class="icon-financial"></i>
-                                    </div>
-                                    <div class="sc-service-content">
-                                        <h4><a class="title" href="service-details.html">Financial Advices</a></h4>
-                                    </div>
-                                    <div class="service-btn">
-                                        <a class="sc-service-btn" href="#"><i class="icon-sliuder-arrow2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                                <div class="sc-services-item services-icon-two sc-mb-70 sc-ml-25 sc-sm-ml-0">
-                                    <div class="services-icon">
-                                        <i class="icon-financial"></i>
-                                    </div>
-                                    <div class="sc-service-content">
-                                        <h4>
-                                            <p class="title">Financial Advices</p>
-                                        </h4>
-                                    </div>
-                                    <div class="service-btn">
-                                        <a class="sc-service-btn" href="#"><i class="icon-sliuder-arrow2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                                <div class="sc-services-item services-icon-two sc-mb-70 sc-ml-25 sc-sm-ml-0">
-                                    <div class="services-icon">
-                                        <i class="icon-financial"></i>
-                                    </div>
-                                    <div class="sc-service-content">
-                                        <h4>
-                                            <p class="title">Financial Advices</p>
-                                        </h4>
-                                    </div>
-                                    <div class="service-btn">
-                                        <a class="sc-service-btn" href="#"><i class="icon-sliuder-arrow2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row sc-pl-40">
-                            <div class="col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-                                <div class="sc-services-item sc-mb-70  sc-sm-mt-30 sc-md-mr-0">
-                                    <div class="services-icon">
-                                        <i class="icon-bussness"></i>
-                                    </div>
-                                    <div class="sc-service-content">
-                                        <h4>
-                                            <p class="title">Business Planning</p>
-                                        </h4>
-                                    </div>
-                                    <div class="service-btn">
-                                        <a class="sc-service-btn" href="#"><i class="icon-sliuder-arrow2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                                <div class="sc-services-item services-icon-two sc-mb-70 sc-ml-25 sc-sm-ml-0">
-                                    <div class="services-icon">
-                                        <i class="icon-financial"></i>
-                                    </div>
-                                    <div class="sc-service-content">
-                                        <h4><a class="title" href="service-details.html">Financial Advices</a></h4>
-                                    </div>
-                                    <div class="service-btn">
-                                        <a class="sc-service-btn" href="#"><i class="icon-sliuder-arrow2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                                <div class="sc-services-item services-icon-two sc-mb-70 sc-ml-25 sc-sm-ml-0">
-                                    <div class="services-icon">
-                                        <i class="icon-financial"></i>
-                                    </div>
-                                    <div class="sc-service-content">
-                                        <h4>
-                                            <p class="title">Financial Advices</p>
-                                        </h4>
-                                    </div>
-                                    <div class="service-btn">
-                                        <a class="sc-service-btn" href="#"><i class="icon-sliuder-arrow2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="400">
-                                <div class="sc-services-item services-icon-two sc-mb-70 sc-ml-25 sc-sm-ml-0">
-                                    <div class="services-icon">
-                                        <i class="icon-financial"></i>
-                                    </div>
-                                    <div class="sc-service-content">
-                                        <h4>
-                                            <p class="title">Financial Advices</p>
-                                        </h4>
-                                    </div>
-                                    <div class="service-btn">
-                                        <a class="sc-service-btn" href="#"><i class="icon-sliuder-arrow2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
+                <div class="">
+                    <div class="sc-heading-area sc-mb-55 text-center">
+                        <span class="sub-title"><i class="icon-line me-2"></i> Our Training Services</span>
                     </div>
+                    <div class="sc-global-text training-service-sub-header">
+                        <p class="des text-center">
+                            We offer a comprehensive suite of training programs designed to enhance the skills and
+                            competencies of professionals across various domains.
+                        </p>
+                    </div>
+
                 </div>
             </div>
+            <div class="swiper sc-pagination-active sc-swiper-slider swiper-initialized swiper-horizontal swiper-pointer-events">
+                <div class="swiper-wrapper" id="swiper-wrapper-10a787fa1f59bd906" aria-live="off" style="transform: translate3d(-3357.5px, 0px, 0px); transition-duration: 0ms;">
+
+                    <div class="swiper-slide" data-swiper-slide-index="0" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="1 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/s1.jpg" alt="Team"></a>
+                                </div>
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Project Management</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="1" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="2 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/s2.jpg" alt="Team"></a>
+                                </div>
+
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Product Management</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="2" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="3 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/customer-service.jpg" alt="Team"></a>
+                                </div>
+
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Customer Service</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="3" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="4 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/s3.jpg" alt="Team"></a>
+                                </div>
+
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Financial Literacy</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/innovation.jpg" alt="Team"></a>
+                                </div>
+
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Innovation</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/s5.jpg" alt="Team"></a>
+                                </div>
+
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Marketing</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/s7.jpg" alt="Team"></a>
+                                </div>
+
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Sales</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/s8.jpg" alt="Team"></a>
+                                </div>
+
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Business Development</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
+                        <div class="sc-team-item text-center">
+                            <div class="item-img">
+                                <div class="team-image">
+                                    <a href=""><img src="assets/images/service/s9.jpg" alt="Team"></a>
+                                </div>
+
+                                <div class="sc-team-content">
+                                    <h4>
+                                        <p class="title">Business Strategy</p>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-3a031d2fb3633eb1"></div>
+                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-3a031d2fb3633eb1"></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
         </div>
-        <div class="sc-services-bg-left"></div>
-        <!-- <div class="sc-services-bg-right sc-lg-hide sal-animate" data-sal="slide-left" data-sal-duration="800"></div> -->
     </div>
     <!--=========== Trainig Service Section Ends =========-->
 
@@ -483,6 +497,7 @@
             <div class="swiper sc-pagination-active-30 sc-blog-slider swiper-initialized swiper-horizontal swiper-pointer-events">
                 <div class="swiper-wrapper" id="swiper-wrapper-38101a1acdb6ffc22" aria-live="off" style="transform: translate3d(-2692px, 0px, 0px); transition-duration: 0ms;">
 
+                    @foreach($testimonialView as $testview)
                     <div class="swiper-slide" data-swiper-slide-index="1" style="width: 418.667px; margin-right: 30px;" role="group" aria-label="2 / 6">
                         <div class="sc-test-item">
                             <div class="sc-testimonial-text">
@@ -490,101 +505,20 @@
                                     <i class="icon-quote-icon primary-color"></i>
                                 </h6>
                                 <p class="des">
-                                    His signs he morning gathered, also were all appear itself had fourth he made above likeness brought thing day there seed do divide replenis
+                                    {{ \Illuminate\Support\Str::words($testview->testimonial, 35, '...') }}
                                 </p>
                             </div>
                             <div class="sc-auother-text d-flex align-items-center">
                                 <div class="sc-auother-image sc-mr-15">
-                                    <img src="assets/images/icons/test-one.jpg" alt="Icon">
+                                    <img src="{{ asset('client_logos/' . $testview->client_logo) }}" width="100" height="65" alt="Icon">
                                 </div>
                                 <div class="sc-auother-header">
-                                    <h5>Olam Nigeria</h5>
+                                    <h5>{{ $testview->client_name }}</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 418.667px; margin-right: 30px;" role="group" aria-label="3 / 6">
-                        <div class="sc-test-item">
-                            <div class="sc-testimonial-text">
-                                <h6 class="quote">
-                                    <i class="icon-quote-icon primary-color"></i>
-                                </h6>
-                                <p class="des">
-                                    His signs he morning gathered, also were all appear itself had fourth he made above likeness brought thing day there seed do divide replenis
-                                </p>
-                            </div>
-                            <div class="sc-auother-text d-flex align-items-center">
-                                <div class="sc-auother-image sc-mr-15">
-                                    <img src="assets/images/icons/test-two.jpg" alt="Icon">
-                                </div>
-                                <div class="sc-auother-header">
-                                    <h5>Flour Mills Nigeria</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 418.667px; margin-right: 30px;" role="group" aria-label="4 / 6">
-                        <div class="sc-test-item">
-                            <div class="sc-testimonial-text">
-                                <h6 class="quote">
-                                    <i class="icon-quote-icon primary-color"></i>
-                                </h6>
-                                <p class="des">
-                                    His signs he morning gathered, also were all appear itself had fourth he made above likeness brought thing day there seed do divide replenis
-                                </p>
-                            </div>
-                            <div class="sc-auother-text d-flex align-items-center">
-                                <div class="sc-auother-image sc-mr-15">
-                                    <img src="assets/images/icons/test.jpg" alt="Icon">
-                                </div>
-                                <div class="sc-auother-header">
-                                    <h5>Tantalum Academy</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="4" style="width: 418.667px; margin-right: 30px;" role="group" aria-label="5 / 6">
-                        <div class="sc-test-item">
-                            <div class="sc-testimonial-text">
-                                <h6 class="quote">
-                                    <i class="icon-quote-icon primary-color"></i>
-                                </h6>
-                                <p class="des">
-                                    His signs he morning gathered, also were all appear itself had fourth he made above likeness brought thing day there seed do divide replenis
-                                </p>
-                            </div>
-                            <div class="sc-auother-text d-flex align-items-center">
-                                <div class="sc-auother-image sc-mr-15">
-                                    <img src="assets/images/icons/test-one.jpg" alt="Icon">
-                                </div>
-                                <div class="sc-auother-header">
-                                    <h5> UK Nigeria Tech Hub</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 418.667px; margin-right: 30px;" role="group" aria-label="6 / 6">
-                        <div class="sc-test-item">
-                            <div class="sc-testimonial-text">
-                                <h6 class="quote">
-                                    <i class="icon-quote-icon primary-color"></i>
-                                </h6>
-                                <p class="des">
-                                    His signs he morning gathered, also were all appear itself had fourth he made above likeness brought thing day there seed do divide replenis
-                                </p>
-                            </div>
-                            <div class="sc-auother-text d-flex align-items-center">
-                                <div class="sc-auother-image sc-mr-15">
-                                    <img src="assets/images/icons/test-two.jpg" alt="Icon">
-                                </div>
-                                <div class="sc-auother-header">
-                                    <h5>Idea Africa</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-38101a1acdb6ffc22"></div>
                 <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-38101a1acdb6ffc22"></div>

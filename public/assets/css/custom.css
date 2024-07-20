@@ -1,5 +1,5 @@
 .sc-main-menu>ul>li {
-    margin-right: 45px;
+    margin-right: 30px;
 }
 
 .sc-main-menu>ul>li>a {
@@ -52,7 +52,7 @@
 
 .sc-main-menu li a {
     color: #03041c;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     display: block;
     transition: 0.4s;
@@ -1545,6 +1545,7 @@
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
+    z-index: -1;
 }
 
 .sc-about-service-box .icomoon {
@@ -1599,6 +1600,13 @@
     opacity: 1;
     visibility: visible;
     bottom: 0;
+
+}
+
+
+.sc-about-service-box .des {
+    color: #000 !important;
+    z-index: 2;
 }
 
 .sc-about-service-box:hover .sc-hover-overly {
@@ -1814,16 +1822,16 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 400px;
+    width: 500px;
     z-index: 9999;
     background: #fff;
     padding: 30px 30px 30px;
-    right: -450px;
+    right: -500px;
     opacity: 0;
     visibility: visible;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
 }
 
 .sc-product-offcanvas-area .sc-offcanvas-header {
@@ -2309,7 +2317,7 @@
 
 .sc-services-style3 .sc-service-text {
     position: relative;
-    padding-left: 74px;
+    padding-left: 54px;
     padding-top: 33px;
     margin-bottom: -55px;
 }
@@ -2321,16 +2329,20 @@
 }
 
 .sc-services-style3 .sc-services-icon i {
-    width: 100px;
-    height: 100px;
-    line-height: 85px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    /* line-height: 85px; */
     background: var(--mainColor);
-    border: 10px solid #fff;
+    border: 5px solid #fff;
     color: #fff;
-    font-size: 35px;
+    font-size: 14px;
     text-align: center;
     display: block;
+    font-style: normal !important;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sc-services-style3 .service-title {
@@ -2872,11 +2884,12 @@
 }
 
 .sc-counter-bg2 {
-    background-image: url(../images/bg/counter-bg.jpg);
+    /* background-image: url(../images/bg/counter-bg.jpg); */
+    background: #000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 5px;
     background-color: #f7f7f7;
 }
 
@@ -3031,8 +3044,7 @@
 }
 
 .sc-team-section-area {
-    padding-top: 210px;
-    margin-top: -110px;
+    padding-top: 80px;
 }
 
 .sc-team-style-two {
@@ -3063,6 +3075,8 @@
 .sc-team-item .sc-team-content .title {
     color: #03041c;
     transition: 0.4s;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .sc-team-item .sc-team-content .title:hover {
@@ -3077,12 +3091,15 @@
 
 .sc-team-item .team-image {
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 220px;
 }
 
 .sc-team-item .item-img {
     position: relative;
     margin-bottom: 10px;
+
 }
 
 .sc-team-item .item-img img {
@@ -3090,6 +3107,10 @@
     transition: 0.8s;
     -webkit-transition: 0.8s;
     -moz-transition: 0.8s;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .sc-team-item:hover .item-img img {
@@ -3864,7 +3885,7 @@
 
 .sc-cta-section-area {
     position: relative;
-    margin-top: -220px;
+    /* margin-top: -220px; */
 }
 
 .sc-cta-section-area .container-fluid {
@@ -4071,6 +4092,7 @@
 
 .sc-company-section-area {
     background: url(../images/bg/company-bg.jpg);
+    background: #000;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -4093,66 +4115,15 @@
 
 .sc-project-item img {
     border-radius: 5px;
-}
-
-.sc-project-item::before {
-    content: "";
-    position: absolute;
-    background: var(--mainColor);
-    left: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    border-radius: 5px;
-    bottom: -100%;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
 }
 
-.sc-project-item .sc-project-content-box .sc-project-icon {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.7s;
-    -webkit-transition: 0.7s;
-    -moz-transition: 0.7s;
-}
 
-.sc-project-item .sc-project-content-box .sc-project-icon i {
-    color: var(--mainColor);
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    border-radius: 50%;
-    font-size: 15px;
-    text-align: center;
-    display: inline-block;
-    background: #ffffff;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    transform: rotate(0deg);
-}
-
-.sc-project-item .sc-project-content-box .sc-project-icon i:hover {
-    transform: rotate(-45deg);
-}
-
-.sc-project-item .sc-project-content-box .sc-project-text {
-    position: absolute;
-    bottom: 30px;
-    left: 40px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.7s;
-    -webkit-transition: 0.7s;
-    -moz-transition: 0.7s;
-}
 
 .sc-project-item .sc-project-content-box .sc-project-text a {
     transition: 0.4s;
@@ -4542,19 +4513,19 @@
 }
 
 ::placeholder {
-    color: #d6d7e5 !important;
+    color: #726f6f !important;
     opacity: 1;
     /* Firefox */
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #d6d7e5 !important;
+    color: #726f6f !important;
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: #d6d7e5 !important;
+    color: #726f6f !important;
 }
 
 .sc-price-item {
@@ -5036,6 +5007,20 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+}
+
+.sc-breadcrumb-style::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    background: linear-gradient(to top, rgba(11, 15, 40, 0.7) 50%, rgba(11, 15, 40, 0.7)50%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7)50%);
+    width: 100%;
+    height: 100%;
 }
 
 .sc-breadcrumb-style .sc-slider-subtitle {
@@ -5048,6 +5033,10 @@
     padding: 9px 22px 5px;
     border-left: 2px solid var(--mainColor);
     margin-bottom: 18px;
+}
+
+.sc-breadcrumb-style h1 {
+    font-size: 50px;
 }
 
 .sc-global-section-area {
@@ -5163,8 +5152,9 @@
 
 .sc-brand-section-two {
     position: relative;
-    margin-top: -110px;
+    /* margin-top: -110px; */
     background: none;
+    margin-bottom: 20px;
     background: var(--mainColor);
     z-index: 3;
 }
@@ -5303,8 +5293,10 @@
 }
 
 .sc-testimonial-section.long-gap {
-    padding-top: 310px;
-    margin-top: -190px;
+    padding-top: 100px;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    /* margin-top: -190px; */
 }
 
 .sc-testimonial-section-seven {
@@ -5544,7 +5536,7 @@
 
 .sc-testimonial-section-three .sc-pagination-active-30.sc-blog-slider .swiper-button-next,
 .sc-testimonial-section-three .sc-pagination-active-30.sc-blog-slider .swiper-button-prev {
-    top: 5%;
+    top: 15%;
 }
 
 .sc-testimonial-section-four {
@@ -5631,12 +5623,30 @@
     box-shadow: 0px 2px 4px rgba(62, 68, 90, 0.04);
     padding: 35px 20px 35px;
     visibility: visible;
+    min-height: 360px;
 }
 
 .sc-test-item .sc-testimonial-text {
-    border-bottom: 1px solid #e4e4e4;
-    margin-bottom: 30px;
+    /* border-bottom: 1px solid #e4e4e4; */
+    /* margin-bottom: 30px; */
     padding-bottom: 5px;
+}
+
+.eight-step .sc-test-item .sc-testimonial-text .des{
+    text-align: justify;
+    margin-bottom: 0px;
+}
+
+.eight-step .sc-test-item .sc-auother-header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.eight-step .sc-test-item .sc-auother-header h5{
+    text-align: center;
+    font-size: 16px;
 }
 
 .sc-test-item .sc-testimonial-text img {
@@ -5653,8 +5663,7 @@
 }
 
 .sc-slider-content-area .sc-testimonial-content .des {
-    font-size: 24px;
-    line-height: 1.8;
+    font-size: 18px;
 }
 
 .sc-heading-area .active {
@@ -5863,7 +5872,7 @@
 
 .sc-blog-style2 .sc-blog-text {
     background: #f7f7f7;
-    padding: 25px 20px 0px;
+    padding: 0px 20px 0px;
     margin-bottom: 0;
     margin-top: 25px;
     position: relative;
@@ -6415,12 +6424,13 @@
 
 .sc-footer-subscribe {
     background: #353950;
-    padding: 20px 60px;
+    background: #fff0f0;
+    padding: 20px 10px;
     border-radius: 3px;
 }
 
 .sc-footer-subscribe .sc-form-inner {
-    width: 55%;
+    width: 100%;
     gap: 10px;
 }
 
@@ -6430,8 +6440,9 @@
 
 .sc-footer-subscribe .input-field {
     position: relative;
-    width: 80%;
+    width: 100%;
     border-radius: 5px;
+    border: 1px solid var(--mainColor);
 }
 
 .sc-footer-subscribe .input-field .icon-send {
@@ -7182,34 +7193,40 @@
     display: block;
 }
 
+.contact-box {
+    padding-left: 15px;
+}
+
 .contact-box input.from-control {
     width: 100%;
-    margin-bottom: 30px;
-    padding: 15px 20px;
-    border: 2px solid #eef0f1;
+    margin-bottom: 16px;
+    padding: 8px 15px;
+    border: 1px solid #000;
     border-radius: 3px;
+    background: #fff0f0;
+    font-size: 16px;
 }
 
-.contact-box ::placeholder {
-    color: #6a6c71;
-    opacity: 1;
+.contact-box input.from-control:focus {
+    background: #fff;
+    border: 1px solid var(--mainColor);
 }
 
-.contact-box :-ms-input-placeholder {
-    color: #6a6c71;
-}
 
-.contact-box ::-ms-input-placeholder {
-    color: #6a6c71;
-}
 
 .contact-box textarea {
     width: 100%;
     margin-bottom: 20px;
     border-radius: 3px;
-    padding: 15px 20px;
-    height: 160px;
-    border: 2px solid #eef0f1;
+    padding: 10px 15px;
+    height: 110px;
+    border: 1px solid #000;
+    background: #fff0f0;
+}
+
+.contact-box textarea:focus {
+    background: #fff;
+    border: 1px solid var(--mainColor);
 }
 
 .contact-box .sc-primary-btn {
@@ -7233,7 +7250,9 @@
 .sc-contact-info {
     background: #f7f7f7;
     border-radius: 2px;
-    padding: 50px;
+    padding: 70px 60px;
+    margin-top: 60px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .sc-contact-info ul li {
@@ -7295,13 +7314,14 @@
 .sc-google-map .sc-gray-icon {
     position: absolute;
     top: 42%;
-    left: 50%;
+    left: 49%;
     transform: translate(-50%, -50%);
     z-index: 9;
     animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     -moz-animation: bounce 2s infinite;
     -o-animation: bounce 2s infinite;
+    display: none;
 }
 
 .sc-google-map .sc-gray-icon i {
