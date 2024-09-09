@@ -337,14 +337,31 @@
         <div class="container">
             <div class="swiper sc-brand-slider swiper-initialized swiper-horizontal swiper-pointer-events">
                 <div class="swiper-wrapper" id="swiper-wrapper-b15c066988214910" aria-live="off" style="transform: translate3d(-1615.2px, 0px, 0px); transition-duration: 0ms;">
+
+                    @foreach($testimonialView as $logo)
                     <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 239.2px; margin-right: 30px;" role="group" aria-label="2 / 10">
                         <div class="sc-brand-image-box">
                             <div class="sc-brand-image">
-                                <a href="#"><img src="assets/images/brand/brand_1.png" alt="Brand"></a>
+                                <a href="javascript:void(0)"><img src="{{ asset('client_logos/' . $logo->client_logo) }}" alt="Brand"></a>
+                                <p style="text-align: center; color: #fff;">{{ $logo->client_name }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 239.2px; margin-right: 30px;" role="group" aria-label="3 / 10">
+                    @endforeach
+
+                    <style>
+                        .sc-brand-image img {
+                            /* object-fit: cover;
+                            object-position: top; */
+                            width: 100%;
+                            height: 140px;
+                        }
+
+                        .sc-brand-section-two .sc-brand-image-box {
+                            padding: 55px 0 50px;
+                        }
+                    </style>
+                    <!-- <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 239.2px; margin-right: 30px;" role="group" aria-label="3 / 10">
                         <div class="sc-brand-image-box">
                             <div class="sc-brand-image">
                                 <a href="#"><img src="assets/images/brand/brand_2.png" alt="Brand"></a>
@@ -371,7 +388,7 @@
                                 <a href="#"><img src="assets/images/brand/brand.png" alt="Brand"></a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 

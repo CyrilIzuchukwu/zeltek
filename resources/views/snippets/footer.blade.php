@@ -3,8 +3,8 @@
         <div class="row sc-pb-100 sc-md-pb-80">
             <div class="col-lg-4  col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="100">
                 <div class="footer-about sc-md-mb-45">
-                    <div class="footer-logo sc-mb-30">
-                        <a href="#"><img src="assets/images/footer-logo.png" alt="Foote Logo"></a>
+                    <div class=" sc-mb-20">
+                        <a href="/"><img src="assets/images/ZNB.png" width="60" alt="Footer Logo"></a>
                     </div>
                     <p class="footer-des">We are dedicated to providing tailored solutions that address the unique needs of each client. Our team of experienced professionals collaborates closely with organizations to understand their
                         specific goals and challenges...</p>

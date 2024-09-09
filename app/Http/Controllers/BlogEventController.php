@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class BlogEventController extends Controller
@@ -114,6 +115,118 @@ class BlogEventController extends Controller
             $blog->save();
 
             return redirect()->route('blogs')->with('success', 'Blog updated successfully.');
+        } catch (\Exception $e) {
+            return redirect()->back()->withInput()->with('error', $e->getMessage());
+        }
+    }
+
+
+
+
+
+
+    // events
+
+    public function add_event()
+    {
+        return view('blog_event.add_event');
+    }
+
+
+    public function create_event(Request $request)
+    {
+        try {
+            $request->validate([
+                'title' => 'required',
+                'content' => 'required',
+                'event_image' => 'required|image|max:5000',
+            ]);
+
+            // Save the main property image
+            if ($request->hasFile('event_image')) {
+                $eventImage = $request->file('event_image');
+                $eventImageName = time() . '.' . $eventImage->getClientOriginalExtension();
+                $eventImage->move(public_path('event_images'), $eventImageName);
+            }
+
+            $title = $request->title;
+            $content = $request->content;
+
+            $event = Event::updateOrCreate(
+                [
+                    'title' => $title,
+                    'content' => $content,
+                    'image' => $eventImageName,
+                ]
+            );
+
+            $event->save();
+            return redirect()->route('events')->with('success', 'Event created.');
+        } catch (\Exception $e) {
+            // Log::error($e);
+            return redirect()->back()->withInput()->with('error', $e->getMessage());
+        }
+    }
+
+    public function events()
+    {
+        $events = Event::orderBy('created_at', 'desc')->Paginate(10);
+
+        return view('blog_event.events', compact('events'));
+    }
+
+    public function delete_event($id)
+    {
+        $data = Event::find($id);
+        $data->delete();
+        return redirect()->back()->with('success', 'Event deleted successfully');
+    }
+
+
+    public function edit_event($id)
+    {
+        $data = Event::find($id);
+        return view('blog_event.edit_event', compact('data'));
+    }
+
+
+    public function update_event(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'title' => 'required',
+                'content' => 'required',
+                'event_image' => 'nullable|image|max:5000',
+            ]);
+
+            // Find the blog by ID
+            $event = Event::find($id);
+
+            if (!$event) {
+                return redirect()->back()->with('error', 'Event not found.');
+            }
+
+            // Save the new blog image if it is provided
+            if ($request->hasFile('event_image')) {
+                // Delete the old blog image if it exists
+                if (file_exists(public_path('event_images/' . $event->image))) {
+                    unlink(public_path('event_images/' . $event->image));
+                }
+
+                $eventImage = $request->file('event_image');
+                $eventImageName = time() . '.' . $eventImage->getClientOriginalExtension();
+                $eventImage->move(public_path('event_images'), $eventImageName);
+                $event->image = $eventImageName;
+            }
+
+            // dd($blog);
+
+            $event->title = $request->title;
+            $event->content = $request->content;
+
+            $event->save();
+
+            return redirect()->route('events')->with('success', 'Event updated successfully.');
         } catch (\Exception $e) {
             return redirect()->back()->withInput()->with('error', $e->getMessage());
         }

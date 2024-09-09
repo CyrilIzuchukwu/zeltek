@@ -41,9 +41,14 @@ class SuperAdminController extends Controller
 
     {
         $request->validate([
-            'name' => 'required', 'string', 'max:255',
+            'name' => 'required',
+            'string',
+            'max:255',
             'email' => 'required|email|unique:users,email|max:225,string',
-            'password' => 'required', 'string', 'min:8', 'confirmed',
+            'password' => 'required',
+            'string',
+            'min:8',
+            'confirmed',
         ]);
 
         $bnbsend = new User();
@@ -138,7 +143,7 @@ class SuperAdminController extends Controller
 
         // Check if the old password matches
         if (!Hash::check($request->old_password, $user->password)) {
-            return redirect()->back()->with('error', 'The old password is incorrect.' );
+            return redirect()->back()->with('error', 'The old password is incorrect.');
         }
 
         // Check if new password matches confirm password

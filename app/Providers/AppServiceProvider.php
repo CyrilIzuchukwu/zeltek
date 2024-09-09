@@ -4,8 +4,11 @@ namespace App\Providers;
 
 use App\Models\Blog;
 use App\Models\ContactInformation;
+use App\Models\Event;
 use App\Models\Inquiry;
+use App\Models\Team;
 use App\Models\Testimonial;
+use App\Models\TrainingService;
 use App\Models\User;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -61,11 +64,37 @@ class AppServiceProvider extends ServiceProvider
             $view->with('blogCount', $blogCount);
 
 
+            $trainingServiceCount = TrainingService::count();
+            $view->with('trainingServiceCount', $trainingServiceCount);
+
+
+            $eventCount = Event::count();
+            $view->with('eventCount', $eventCount);
+
+
+
+            $teamCount = Team::count();
+            $view->with('teamCount', $teamCount);
+
+
+
 
 
             // blogs in frontend
             $all_blogs = Blog::orderBy('created_at', 'desc')->Paginate(2);
             $view->with('all_blogs', $all_blogs);
+
+
+            $all_events = Event::orderBy('created_at', 'desc')->Paginate(2);
+            $view->with('all_events', $all_events);
+
+
+            $trainingServices = TrainingService::all();
+            $view->with('trainingServices', $trainingServices);
+
+
+            $oursTeams = Team::all();
+            $view->with('oursTeams', $oursTeams);
         });
     }
 }

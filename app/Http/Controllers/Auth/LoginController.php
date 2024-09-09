@@ -36,14 +36,15 @@ class LoginController extends Controller
             return redirect('/login')->with('error', 'Your account have been suspended');
         }
 
-        if (Auth::user()->role_as == '1') {
-            return redirect('super_admin/dashboard')->with('message', 'Welcome to your Dashboard');
+        if (Auth::user()->role_as == '1' || Auth::user()->role_as == '2') {
+            return redirect('admin/dashboard')->with('message', 'Welcome to your Dashboard');
         } elseif (Auth::user()->role_as == '0') {
             // return redirect('/home')->with('success', 'Logged in successfully');
             dd('welcome');
-        } elseif (Auth::user()->role_as == '2') {
-            return redirect('sub_admin/dashboard')->with('success', 'Welcome to your Dashbaord');
         }
+        // elseif (Auth::user()->role_as == '2') {
+        //     return redirect('admin/dashboard')->with('success', 'Welcome to your Dashbaord');
+        // }
     }
     /**
      * Create a new controller instance.

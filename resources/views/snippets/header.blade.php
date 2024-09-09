@@ -50,39 +50,35 @@
                 <div class="col-lg-10 col-6">
                     <div class="sc-menu-inner d-flex align-items-center">
                         <div class="sc-header-logo sc-pr-90">
-                            <a href="index.html"><img src="assets/images/ZNB.png" width="100" alt="Logo" style=""mar /></a>
+                            <a href="/"><img src="assets/images/ZNB.png" width="55" alt="Logo" /></a>
                         </div>
                         <div class="sc-main-menu d-lg-block d-none">
                             <!-- Mainmenu Section Start -->
                             <ul class="list-gap main-menu">
-                                <li class="current-menu-item ">
-                                    <a class="active" href="/"> Home</a>
+                                <li class="{{ request()->routeIs('home') ? 'current-menu-item active' : '' }}">
+                                    <a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="/">Home</a>
                                 </li>
-                                <li>
-                                    <a href="/about_us"> About Us</a>
+                                <li class="{{ request()->routeIs('about_us') ? 'current-menu-item active' : '' }}">
+                                    <a class="{{ request()->routeIs('about_us') ? 'active' : '' }}" href="/about_us">About Us</a>
                                 </li>
-
-                                <li>
-                                    <a href="/services">Services</a>
+                                <li class="{{ request()->routeIs('services') ? 'current-menu-item active' : '' }}">
+                                    <a class="{{ request()->routeIs('services') ? 'active' : '' }}" href="/services">Services</a>
                                 </li>
-
-                                <li>
-                                    <a href="/blog">Blog</a>
+                                <li class="{{ request()->routeIs('blog') ? 'current-menu-item active' : '' }}">
+                                    <a class="{{ request()->routeIs('blog') ? 'active' : '' }}" href="/blog">Blog</a>
                                 </li>
-
-                                <li>
-                                    <a href="/events">Events</a>
+                                <li class="{{ request()->routeIs('events') ? 'current-menu-item active' : '' }}">
+                                    <a class="{{ request()->routeIs('events') ? 'active' : '' }}" href="/events">Events</a>
                                 </li>
-
-                                <li><a href="/contact_us">Contact</a></li>
-
+                                <li class="{{ request()->routeIs('contact_us') ? 'current-menu-item active' : '' }}">
+                                    <a class="{{ request()->routeIs('contact_us') ? 'active' : '' }}" href="/contact_us">Contact</a>
+                                </li>
                                 @auth
                                 @if(Auth::user()->role_as == 1)
                                 <li><a href="{{ route('admin_dashboard') }}">Dashboard</a></li>
                                 @elseif(Auth::user()->role_as == 2)
-                                <li><a href="">Dashboard</a></li>
+                                <li><a href="{{ route('user_dashboard') }}">Dashboard</a></li>
                                 @endif
-
                                 @endauth
                             </ul>
                             <!-- Mainmenu Section End -->

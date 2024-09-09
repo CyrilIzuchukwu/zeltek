@@ -241,17 +241,19 @@
             <div class="swiper sc-pagination-active sc-swiper-slider swiper-initialized swiper-horizontal swiper-pointer-events">
                 <div class="swiper-wrapper training-service" id="swiper-wrapper-fd6a6a828384a5d4" aria-live="off" style="transform: translate3d(-2350.25px, 0px, 0px); transition-duration: 0ms;">
 
+                    @foreach($trainingServices as $sts)
                     <div class="swiper-slide " data-swiper-slide-index="0" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="1 / 8">
                         <div class="sc-project-item">
-                            <img src="assets/images/service/s1.jpg" alt="Image">
+                            <img src="{{ asset('service_images/' . $sts->image) }}" alt="Image">
                             <div class="details">
-                                <h6>Project Management</h6>
-                                <p class="des">Our training programs cover the latest project management
-                                    methodologies, tools, and best practices, empowering participants to lead and deliver
-                                    projects successfully.</p>
+                                <h6>{{ $sts->service_name }}</h6>
+                                <p class="des">{{ $sts->content }}</p>
                             </div>
                         </div>
                     </div>
+                    @endforeach
+
+                    <!--
                     <div class="swiper-slide" data-swiper-slide-index="1" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="2 / 8">
                         <div class="sc-project-item">
                             <img src="assets/images/service/s2.jpg" alt="Image">
@@ -323,7 +325,7 @@
                                     participants identify growth opportunities and build successful business relationships.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-fd6a6a828384a5d4"></div>

@@ -17,7 +17,7 @@ class SuperAdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::check()) {
-            if (Auth::user()->role_as == '1') {
+            if (Auth::user()->role_as == '1' || Auth::user()->role_as == '2') {
                 return $next($request);
             } else {
                 return redirect('/')->with('error', 'Access denied');

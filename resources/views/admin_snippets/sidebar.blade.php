@@ -20,12 +20,14 @@
                 </a>
             </li>
 
+            @if (auth()->user()->role_as != 2)
             <li class="">
                 <a href="{{ route('users') }}">
                     <i class="ri-nurse-line"></i>
                     <span class="menu-text">Users</span>
                 </a>
             </li>
+            @endif
 
             <li class="treeview">
                 <a href="#!">
@@ -41,6 +43,24 @@
                     </li>
                 </ul>
             </li>
+
+
+            <li class="treeview">
+                <a href="#!">
+                    <i class="ri-team-fill"></i>
+                    <span class="menu-text">Our Teams</span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="{{ route('add_team') }}">Add Team Member</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('teams') }}">View Teams</a>
+                    </li>
+                </ul>
+            </li>
+
+
 
 
 
@@ -84,6 +104,14 @@
 
                     <li>
                         <a href="{{ route('blogs') }}">View Blogs</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('add_event') }}">Add Event</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('events') }}">View Events</a>
                     </li>
 
                 </ul>

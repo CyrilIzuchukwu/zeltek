@@ -13,11 +13,11 @@
 
         <!-- App brand starts -->
         <div class="app-brand ms-3">
-            <a href="index.html" class="d-lg-block d-none">
-                <img src="admin_assets/assets/images/logo.svg" class="logo" alt="Medicare Admin Template">
+            <a href="/" class="d-lg-block d-none">
+                <img src="assets/images/admin_logo.png" class="logo" alt="Logo">
             </a>
-            <a href="index.html" class="d-lg-none d-md-block">
-                <img src="admin_assets/assets/images/logo-sm.svg" class="logo" alt="Medicare Admin Template">
+            <a href="/" class="d-lg-none d-md-block">
+                <img src="assets/images/admin_logo.png" class="logo" alt="Logo">
             </a>
         </div>
         <!-- App brand ends -->

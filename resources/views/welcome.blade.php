@@ -266,145 +266,23 @@
             <div class="swiper sc-pagination-active sc-swiper-slider swiper-initialized swiper-horizontal swiper-pointer-events">
                 <div class="swiper-wrapper" id="swiper-wrapper-10a787fa1f59bd906" aria-live="off" style="transform: translate3d(-3357.5px, 0px, 0px); transition-duration: 0ms;">
 
+                    @foreach($trainingServices as $sts)
                     <div class="swiper-slide" data-swiper-slide-index="0" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="1 / 8">
                         <div class="sc-team-item text-center">
                             <div class="item-img">
                                 <div class="team-image">
-                                    <a href=""><img src="assets/images/service/s1.jpg" alt="Team"></a>
+                                    <a href=""><img src="{{ asset('service_images/' . $sts->image) }}" alt="Team"></a>
                                 </div>
                                 <div class="sc-team-content">
                                     <h4>
-                                        <p class="title">Project Management</p>
+                                        <p class="title">{{ $sts->service_name }}</p>
                                     </h4>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide" data-swiper-slide-index="1" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="2 / 8">
-                        <div class="sc-team-item text-center">
-                            <div class="item-img">
-                                <div class="team-image">
-                                    <a href=""><img src="assets/images/service/s2.jpg" alt="Team"></a>
-                                </div>
+                    @endforeach
 
-                                <div class="sc-team-content">
-                                    <h4>
-                                        <p class="title">Product Management</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" data-swiper-slide-index="2" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="3 / 8">
-                        <div class="sc-team-item text-center">
-                            <div class="item-img">
-                                <div class="team-image">
-                                    <a href=""><img src="assets/images/service/customer-service.jpg" alt="Team"></a>
-                                </div>
-
-                                <div class="sc-team-content">
-                                    <h4>
-                                        <p class="title">Customer Service</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" data-swiper-slide-index="3" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="4 / 8">
-                        <div class="sc-team-item text-center">
-                            <div class="item-img">
-                                <div class="team-image">
-                                    <a href=""><img src="assets/images/service/s3.jpg" alt="Team"></a>
-                                </div>
-
-                                <div class="sc-team-content">
-                                    <h4>
-                                        <p class="title">Financial Literacy</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
-                        <div class="sc-team-item text-center">
-                            <div class="item-img">
-                                <div class="team-image">
-                                    <a href=""><img src="assets/images/service/innovation.jpg" alt="Team"></a>
-                                </div>
-
-                                <div class="sc-team-content">
-                                    <h4>
-                                        <p class="title">Innovation</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
-                        <div class="sc-team-item text-center">
-                            <div class="item-img">
-                                <div class="team-image">
-                                    <a href=""><img src="assets/images/service/s5.jpg" alt="Team"></a>
-                                </div>
-
-                                <div class="sc-team-content">
-                                    <h4>
-                                        <p class="title">Marketing</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
-                        <div class="sc-team-item text-center">
-                            <div class="item-img">
-                                <div class="team-image">
-                                    <a href=""><img src="assets/images/service/s7.jpg" alt="Team"></a>
-                                </div>
-
-                                <div class="sc-team-content">
-                                    <h4>
-                                        <p class="title">Sales</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
-                        <div class="sc-team-item text-center">
-                            <div class="item-img">
-                                <div class="team-image">
-                                    <a href=""><img src="assets/images/service/s8.jpg" alt="Team"></a>
-                                </div>
-
-                                <div class="sc-team-content">
-                                    <h4>
-                                        <p class="title">Business Development</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide" data-swiper-slide-index="5" style="width: 310.75px; margin-right: 25px;" role="group" aria-label="6 / 8">
-                        <div class="sc-team-item text-center">
-                            <div class="item-img">
-                                <div class="team-image">
-                                    <a href=""><img src="assets/images/service/s9.jpg" alt="Team"></a>
-                                </div>
-
-                                <div class="sc-team-content">
-                                    <h4>
-                                        <p class="title">Business Strategy</p>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-3a031d2fb3633eb1"></div>
                 <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-3a031d2fb3633eb1"></div>

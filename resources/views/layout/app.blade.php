@@ -44,7 +44,11 @@
     <!-- preloader -->
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
-
+            <div class="spinner">
+                <div class="loader-icon">
+                    <img src="assets/images/fav.png" alt="">
+                </div>
+            </div>
             <div class="txt-loading">
                 <span data-text-preloader="Z" class="letters-loading"> Z </span>
                 <span data-text-preloader="E" class="letters-loading"> E </span>
@@ -187,6 +191,30 @@
     <script src="{{ asset('assets/js/sal.js') }}"></script>
     <!-- main js -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+
+    <!-- sweet alert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (session('message'))
+    <script>
+        swal("Successful!", "{{ session('message') }}!", "success");
+    </script>
+    @endif
+    @if(session('error')) < script>
+        swal("Error!", "{{ session('error') }}!", "warning");
+        </script>
+        @endif
+        @if (Session::has('success'))
+        <script>
+            swal("Successful!", "{{ Session::get('success') }}!", "success");
+        </script>
+        @endif
+
+        @if (Session::has('error'))
+        <script>
+            swal("Error!", "{{ Session::get('error') }}!", "warning");
+        </script>
+        @endif
 </body>
 
 

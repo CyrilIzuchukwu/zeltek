@@ -5,7 +5,9 @@ use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\ContactInformationController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SubAdminController;
 use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TrainingServiceController;
 use Illuminate\Support\Facades\Auth;
@@ -22,32 +24,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Public routes
 Route::get('/', function () {
     return view('welcome');
-});
-
+})->name('home');
 
 Route::get('/about_us', function () {
     return view('about_us');
-});
+})->name('about_us');
 
 Route::get('/services', function () {
     return view('services');
-});
-
+})->name('services');
 
 Route::get('/blog', function () {
     return view('blog');
-});
+})->name('blog');
 
 Route::get('/events', function () {
     return view('events');
-});
-
+})->name('events');
 
 Route::get('/contact_us', function () {
     return view('contact_us');
-});
+})->name('contact_us');
+
 
 Route::get('/privacy_policy', function () {
     return view('privacy_policy');
@@ -69,12 +70,14 @@ Auth::routes();
 
 Route::get('/blog_details/{id}', [FrontEndController::class, 'blog_details'])->name('blog_details');
 
+Route::get('/event_details/{id}', [FrontEndController::class, 'event_details'])->name('event_details');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth', 'isSuperAdmin'])->group(function () {
-    Route::get('super_admin/dashboard', [SuperAdminController::class, 'admin_dashboard'])->name('admin_dashboard');
+    Route::get('admin/dashboard', [SuperAdminController::class, 'admin_dashboard'])->name('admin_dashboard');
 
-    Route::get('admin/users', [SuperAdminController::class, 'users'])->name('users');
+    Route::get('admin/users', [SuperAdminController::class, 'users'])->name('users')->middleware('checkAdminRole');
 
     Route::post('admin/create_sub_admin', [SuperAdminController::class, 'create_sub_admin'])->name('create_sub_admin');
 
@@ -174,4 +177,27 @@ Route::middleware(['auth', 'isSuperAdmin'])->group(function () {
     Route::get('admin/edit_service/{id}', [TrainingServiceController::class, 'edit_service'])->name('edit_service');
 
     Route::post('admin/update_service/{id}', [TrainingServiceController::class, 'update_service'])->name('update_service');
+
+
+
+
+
+    // Team Members
+    Route::get('admin/add_team', [TeamController::class, 'add_team'])->name('add_team');
+
+    Route::post('admin/create_team', [TeamController::class, 'create_team'])->name('create_team');
+
+    Route::get('admin/teams', [TeamController::class, 'teams'])->name('teams');
+
+    Route::get('admin/delete_team/{id}', [TeamController::class, 'delete_team'])->name('delete_team');
+
+    Route::get('admin/edit_team/{id}', [TeamController::class, 'edit_team'])->name('edit_team');
+
+    Route::post('admin/update_team/{id}', [TeamController::class, 'update_team'])->name('update_team');
 });
+
+
+
+// Route::middleware(['auth', 'isSubAdmin'])->group(function () {
+//     Route::get('sub_admin/dashboard', [SubAdminController::class, 'sub_admin_dashboard'])->name('sub_admin_dashboard');
+// });

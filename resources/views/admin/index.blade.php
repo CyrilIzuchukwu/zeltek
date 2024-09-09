@@ -59,7 +59,30 @@
 
             <!-- Row starts -->
             <div class="row gx-3">
-                <div class="col-md-4 col-sm-6 col-12">
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="p-2 border border-success rounded-circle me-3">
+                                    <div class="icon-box md bg-success-subtle rounded-5">
+                                        <i class="ri-message-2-fill fs-4 text-success"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h2 class="lh-1">{{ $trainingServiceCount }}</h2>
+                                    <p class="m-0">Training Service</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-end justify-content-between mt-1">
+                                <a class="text-success" href="{{ route('inquiry') }}">
+                                    <span>View All</span>
+                                    <i class="ri-arrow-right-line text-success ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="d-flex align-items-center">
@@ -82,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12">
+                <div class="col-md-3 col-sm-6 col-12">
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="d-flex align-items-center">
@@ -105,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12">
+                <div class="col-md-3 col-sm-6 col-12">
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="d-flex align-items-center">
@@ -123,6 +146,31 @@
                                 <a class="text-danger" href="javascript:void(0);">
                                     <span>View All</span>
                                     <i class="ri-arrow-right-line ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="p-2 border border-success rounded-circle me-3">
+                                    <div class="icon-box md bg-success-subtle rounded-5">
+                                        <i class="ri-message-2-fill fs-4 text-success"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h2 class="lh-1">{{ $teamCount }}</h2>
+                                    <p class="m-0">Team Members</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-end justify-content-between mt-1">
+                                <a class="text-success" href="{{ route('teams') }}">
+                                    <span>View All</span>
+                                    <i class="ri-team-fill text-success ms-1"></i>
                                 </a>
                             </div>
                         </div>

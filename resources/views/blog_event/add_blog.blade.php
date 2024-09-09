@@ -1,15 +1,6 @@
     @extends('layout.admin')
     @section('content')
 
-
-    <!-- include libraries(jQuery, bootstrap) -->
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> -->
-
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-
-    <!-- include summernote css/js -->
-
-
     <div class="app-container">
 
         <!-- App hero header starts -->

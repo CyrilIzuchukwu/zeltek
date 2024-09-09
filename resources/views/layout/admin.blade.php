@@ -15,7 +15,7 @@
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:type" content="Website">
-    <link rel="shortcut icon" href="admin_assets/assets/images/favicon.svg">
+    <link rel="shortcut icon" href="{{ asset('assets/images/fav.png') }}">
 
 
     <script src="{{ asset('admin_assets/assets/js/jquery.min.js') }}"></script>

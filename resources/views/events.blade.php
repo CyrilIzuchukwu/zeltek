@@ -29,68 +29,52 @@
                 <div class="col-lg-12">
                     <div class="sc-blog-content-area">
                         <div class="row">
+                            @if($all_events->isEmpty())
+                            <div class="col-12 text-center">
+                                <p>No record of Event available.</p>
+                            </div>
+                            @else
+                            @foreach($all_events as $single_event)
                             <div class="col-md-6">
                                 <div class="sc-blog-style2 blog-area sc-mb-70">
                                     <div class="blog-img">
-                                        <a href="blog-details.html"><img src="assets/images/blog/blog-page.jpg" alt="Blog"></a>
+                                        <a href="{{ route('event_details', $single_event->id) }}"><img src="{{ asset('event_images/' . $single_event->image) }}" alt="Event Image"></a>
                                     </div>
                                     <div class="sc-blog-date-box">
-                                        <div class="sc-date-box">
-                                            <h4 class="title">25</h4>
-                                            <span class="sub-title">oct</span>
-                                        </div>
-                                        <div class="sc-blog-social text-center">
-                                            <ul class="list-gap">
-                                                <li><i class="icon-david2"></i> David Wood</li>
-                                            </ul>
+                                        <div class="sc-date-box px-2">
+                                            <h4 class="title">{{ $single_event->created_at->format('d') }}</h4>
+                                            <span class="sub-title">{{ $single_event->created_at->format('M Y') }}</span>
                                         </div>
                                     </div>
                                     <div class="sc-blog-text">
                                         <h3>
-                                            <a class="title" href="blog-details.html">Bring Organic gathering together</a>
+                                            <a class="title" href="{{ route('event_details', $single_event->id) }}">{{ $single_event->title }}</a>
                                         </h3>
                                         <p class="des">
-                                            Green under created good the spirit let fifth send very forth wherein don't, they're over give gathered greater created morning isn't saying
-                                            greater won't...
+                                            {{ \Illuminate\Support\Str::words(strip_tags($single_event->content), 20, '...') }}
                                         </p>
                                         <div class="sc-blog-btn">
-                                            <a class="sc-transparent-btn" href="#">Read Article</a>
+                                            <a class="sc-transparent-btn" href="{{ route('event_details', $single_event->id) }}">Read More</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
+                            @endif
+                        </div>
 
-                            <div class="col-md-6">
-                                <div class="sc-blog-style2 blog-area sc-mb-70">
-                                    <div class="blog-img">
-                                        <a href="blog-details.html"><img src="assets/images/blog/blog-page.jpg" alt="Blog"></a>
-                                    </div>
-                                    <div class="sc-blog-date-box">
-                                        <div class="sc-date-box">
-                                            <h4 class="title">25</h4>
-                                            <span class="sub-title">oct</span>
-                                        </div>
-                                        <div class="sc-blog-social text-center">
-                                            <ul class="list-gap">
-                                                <li><i class="icon-david2"></i> David Wood</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="sc-blog-text">
-                                        <h3>
-                                            <a class="title" href="blog-details.html">Bring Organic gathering together</a>
-                                        </h3>
-                                        <p class="des">
-                                            Green under created good the spirit let fifth send very forth wherein don't, they're over give gathered greater created morning isn't saying
-                                            greater won't...
-                                        </p>
-                                        <div class="sc-blog-btn">
-                                            <a class="sc-transparent-btn" href="#">Read Article</a>
-                                        </div>
-                                    </div>
+                        @if($all_events->isNotEmpty())
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    Showing {{ $all_events->firstItem() }} to {{ $all_events->lastItem() }} of {{ $all_events->total() }} results
+                                </div>
+                                <div>
+                                    {{ $all_events->links('pagination::bootstrap-4') }}
                                 </div>
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
